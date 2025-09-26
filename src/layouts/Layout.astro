@@ -1,22 +1,33 @@
+---
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import CustomCursor from "../components/CustomCursor.astro";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>paulhenry.dev</title>
+    <script
+      is:inline
+      src="https://kit.fontawesome.com/e61dda8ae2.js"
+      crossorigin="anonymous"></script>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Handjet:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="relative cursor-none">
+    <slot />
+
+    <CustomCursor />
+
+    <Nav />
+  </body>
+</html>

@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "DM Serif Display", serif;
+  --font-sans: "DM Sans", sans-serif;
+  --font-accent: Handjet, sans-serif;
+
+  --color-accent: oklch(0.6235 0.1727 31.76);
+  --color-bg: oklch(0.1118 0.0296 31.76);
+}
+
+@layer base {
+  :root {
+    @apply scheme-dark;
+  }
+
+  body {
+    @apply font-sans text-white bg-bg;
+  }
+
+  ::selection {
+    @apply bg-accent text-black;
+  }
+}
+
+@layer utilities {
+  .accent {
+    @apply text-accent font-accent tracking-widest;
+  }
+}
