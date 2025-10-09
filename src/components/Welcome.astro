@@ -1,12 +1,22 @@
 ---
 import { Image } from "astro:assets";
-import me from "../assets/me.jpg";
+import me from "../assets/me-cartoon-2.png";
 ---
 
-<main class="hero min-h-screen grid place-items-center overflow-hidden">
+<main
+  class="hero min-h-screen grid place-items-center overflow-hidden px-[10%]"
+>
   <div class="max-w-7xl flex justify-between">
     <div class="max-w-3xl">
-      <h1 class="text-6xl font-bold text-balance mb-3 font-serif">
+      <Image
+        src={me}
+        alt="A picture of Paul-Henry Ngounou"
+        class="max-w-40 mb-5 md:hidden"
+      />
+
+      <h1
+        class="text-4xl md:text-5xl lg:text-6xl font-bold text-balance mb-3 font-serif"
+      >
         I build sleek software products.
       </h1>
 
@@ -15,9 +25,9 @@ import me from "../assets/me.jpg";
       >
 
       <p class="text-neutral-200 mt-10 text-balance">
-        I write code, break things, fix them, and make ideas come alive on the
-        web. Always learning, always building — whether it’s crafting <span
-          class="accent">sleek frontends</span
+        I write code, break things, fix them, and make ideas come alive. Always
+        learning, always building — whether it’s crafting <span class="accent"
+          >sleek frontends</span
         >, engineering <span class="accent">reliable backends</span>, or
         experimenting with new technologies.
       </p>
@@ -31,28 +41,29 @@ import me from "../assets/me.jpg";
 
         <li>
           <span class="mr-2">&rightarrow;</span>
-          Checkout <a href="/about" class="accent"
+          Checkout <a href="https://github.com/Paul-HenryN" class="accent"
             ><i class="fa-brands fa-github"></i> my work</a
           >
         </li>
 
         <li>
           <span class="mr-2">&rightarrow;</span>
-          Connect with me on <a href="/about" class="accent"
-            ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+          Connect with me on <a
+            href="https://www.linkedin.com/in/paul-henry-ngounou-592194285/"
+            class="accent"><i class="fa-brands fa-linkedin"></i> LinkedIn</a
           >
         </li>
       </ul>
     </div>
 
-    <div class="flex flex-col justify-between items-end">
+    <div class="flex-col justify-between items-end hidden md:flex">
       <Image
         src={me}
         alt="A picture of Paul-Henry Ngounou"
-        class="max-w-40 rounded-full"
+        class="max-w-80 hover:scale-105 transition-transform duration-300 hover:-rotate-6"
       />
 
-      <div>
+      <div class="whitespace-nowrap">
         I also <a
           href="https://www.instagram.com/paul.__.henry/"
           class="accent"

@@ -3,10 +3,10 @@
 @theme {
   --font-serif: "DM Serif Display", serif;
   --font-sans: "DM Sans", sans-serif;
-  --font-accent: Handjet, sans-serif;
+  --font-accent: "Tiny5", sans-serif;
 
   --color-accent: oklch(0.6235 0.1727 31.76);
-  --color-bg: oklch(0.1118 0.0296 31.76);
+  --color-bg: oklch(0.1088 0.0123 31.76);
 }
 
 @layer base {
@@ -25,6 +25,19 @@
 
 @layer utilities {
   .accent {
-    @apply text-accent font-accent tracking-widest;
+    @apply px-1 py-0.5 relative transition-all duration-100 cursor-pointer font-accent text-accent;
+
+    &:after {
+      content: "";
+      @apply block absolute inset-0 bg-accent -z-[5] scale-y-[0.05] origin-bottom transition-all duration-100;
+    }
+
+    &:hover {
+      @apply text-bg;
+    }
+
+    &:hover:after {
+      @apply scale-y-100;
+    }
   }
 }

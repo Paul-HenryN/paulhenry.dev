@@ -1,7 +1,6 @@
 ---
 import "../styles/global.css";
 import Nav from "../components/Nav.astro";
-import CustomCursor from "../components/CustomCursor.astro";
 ---
 
 <!doctype html>
@@ -19,14 +18,12 @@ import CustomCursor from "../components/CustomCursor.astro";
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Handjet:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Handjet:wght@100..900&family=Tiny5&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="relative cursor-none">
+  <body class="relative">
     <slot />
-
-    <CustomCursor />
 
     <Nav />
   </body>
