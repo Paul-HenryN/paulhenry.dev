@@ -3,9 +3,7 @@ import { Image } from "astro:assets";
 import me from "../assets/me-cartoon-2.png";
 ---
 
-<main
-  class="hero min-h-screen grid place-items-center overflow-hidden px-[10%]"
->
+<main class="min-h-screen grid place-items-center overflow-hidden px-[10%]">
   <div class="max-w-7xl flex justify-between">
     <div class="max-w-3xl">
       <Image
@@ -16,6 +14,7 @@ import me from "../assets/me-cartoon-2.png";
 
       <h1
         class="text-4xl md:text-5xl lg:text-6xl font-bold text-balance mb-3 font-serif"
+        transition:name="title"
       >
         I build sleek software products.
       </h1>
@@ -61,6 +60,7 @@ import me from "../assets/me-cartoon-2.png";
         src={me}
         alt="A picture of Paul-Henry Ngounou"
         class="max-w-80 hover:scale-105 transition-transform duration-300 hover:-rotate-6"
+        transition:name="cartoon"
       />
 
       <div class="whitespace-nowrap">
@@ -74,36 +74,3 @@ import me from "../assets/me-cartoon-2.png";
     </div>
   </div>
 </main>
-
-<style>
-  .hero {
-    --_color-grid: rgba(255, 255, 255, 0.151);
-
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-
-      z-index: -10;
-
-      background: linear-gradient(
-          to top right,
-          transparent 20%,
-          var(--color-bg) 35% 65%,
-          transparent
-        ),
-        repeating-linear-gradient(
-          to bottom,
-          var(--_color-grid) 0 1px,
-          transparent 1px 50px
-        ),
-        repeating-linear-gradient(
-          to right,
-          var(--_color-grid) 0 1px,
-          transparent 1px 50px
-        );
-    }
-  }
-</style>

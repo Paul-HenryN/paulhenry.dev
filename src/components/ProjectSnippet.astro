@@ -1,0 +1,24 @@
+---
+const { title, description } = Astro.props;
+---
+
+<article class="flex gap-4">
+  <img src="https://picsum.photos/300/200" class="max-w-48 rounded-md" alt="" />
+
+  <div>
+    <h2 class="font-bold mb-2">
+      {title}
+    </h2>
+
+    <p class="text-gray-400">
+      {description}
+    </p>
+
+    <ul class="flex gap-2 text-sm text-gray-500 mt-4">
+      <li class="badge">React</li>
+      <li class="badge">Astro</li>
+      <li class="badge">Tailwind CSS</li>
+      <li class="badge">Shadcn UI</li>
+    </ul>
+  </div>
+</article>

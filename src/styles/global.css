@@ -40,4 +40,20 @@
       @apply scale-y-100;
     }
   }
+
+  @layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
+}
+
+@layer components {
+  .badge {
+    @apply bg-accent text-black px-3 py-1 rounded-full text-xs font-semibold inline-block;
+  }
 }
